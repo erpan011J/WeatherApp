@@ -139,7 +139,7 @@ const getWeatherData = async () => {
         const date = new Date(new Date().getTime() + (weatherData.data.timezone * 1000));
         const utcDateTime = getCorrectTimeStamp(date)
        
-        // await new Promise(r => setTimeout(r, 1000));
+        await new Promise(r => setTimeout(r, 1000));
 
         weatherData.data.currentTime = utcDateTime
         return weatherData.data
